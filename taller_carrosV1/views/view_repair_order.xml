@@ -1,0 +1,62 @@
+<odoo>
+    <data>
+       <!--Vista tipo tree arbol-->
+       <record id="view_taller_carros_repair_tree" model="ir.ui.view">
+           <field name="name">taller.repair.order</field>
+           <field name="model">taller.repair.order</field>
+           <field name="arch" type="xml">
+               <tree>
+                   <field name="customer_id"/>
+                   <field name="name"/>
+                   <field name="date"/>
+               </tree>
+           </field>
+       </record>
+
+       <!--Vista tipo form-->
+       <record id="view_taller_carros_repair_form" model="ir.ui.view">
+           <field name="name">taller.repair.order</field>
+           <field name="model">taller.repair.order</field>
+           <field name="arch" type="xml">
+               <form>
+                   <sheet>
+                       <group>
+                           <field name="customer_id"/>
+                           <field name="name"/>
+                           <field name="date"/>
+                       </group>
+
+                   </sheet>
+               </form>
+           </field>
+       </record>
+
+       <!--Actions-->
+       <record model="ir.actions.act_window" id="action_vistas">
+           <field name="name">Vista modelo ventana</field>
+           <field name="res_model">taller.repair.order</field>
+           <field name="view_mode">tree,form</field>
+       </record>
+
+       <!--Menus-->
+       <menuitem id="taller_carros_menu_repair_order"
+           name="Ordenes "
+           web_icon="taller_carrosV1,static/description/car.jpg"
+           active="True"
+           sequence="30">
+           <menuitem id="taller_carros_menu_1"
+               name="Ordenes de reparacion"
+               sequence="10">
+               <menuitem id="taller_carros_repair_task"
+                   name="Vista Modelo list"
+                   sequence="10"
+                   action="action_vistas"/>
+               <menuitem id="taller_carros_repair_usuarios"
+                   name="Vista Modelo Form"
+                   sequence="10"
+                   action="action_vistas"/>
+
+           </menuitem>
+       </menuitem>
+    </data>
+</odoo>

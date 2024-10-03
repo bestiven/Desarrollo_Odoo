@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+
+       <!--Vista tipo form-->
+       <record id="view_taller_image_form" model="ir.ui.view">
+           <field name="name">taller carros image form</field>
+           <field name="model">taller.carros</field>
+            <field name="inherit_id" ref="taller_carrosV1.view_taller_carros_form"/>
+           <field name="arch" type="xml">
+              <xpath expr="//sheet" position="inside">
+                  <group>
+                    <field name ="image" widget="image" class="oe_avatar"/>
+                  </group>
+              </xpath>
+           </field>
+       </record>
+
+    </data>
+</odoo>
