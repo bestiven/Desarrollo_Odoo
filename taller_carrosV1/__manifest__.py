@@ -15,6 +15,9 @@
      'security/groups.xml',
      'security/ir.model.access.csv',
      'views/view_taller_carros.xml',
+     'views/view_repair_order.xml',
+
+
 
     ],
     # data files containing optionally loaded demonstration data
