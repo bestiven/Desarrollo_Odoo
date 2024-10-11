@@ -1,0 +1,16 @@
+<odoo>
+    <data noupdate="0">
+        <record id="car_toyota" model="taller.brand">
+        <field name="name">Toyota</field>
+        </record>
+
+        <record id="car_hunday" model="taller.brand">
+        <field name="name">Hyunday</field>
+        </record>
+
+        <record id="car_audi" model="taller.brand">
+        <field name="name">Audi</field>
+        </record>
+
+    </data>
+</odoo>

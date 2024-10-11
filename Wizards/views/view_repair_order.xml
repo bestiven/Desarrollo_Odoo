@@ -50,7 +50,7 @@
         <!-- Menú principal -->
         <menuitem id="taller_carros_menu_root"
                    name="Carros"
-                   web_icon="taller_carrosV1,static/description/images.jpg"
+                   web_icon="Wizards/static/description/icon.jpg"
                    active="True"
                    sequence="30">
 
