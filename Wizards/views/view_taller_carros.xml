@@ -1,0 +1,74 @@
+<odoo>
+    <data>
+       <!--Vista tipo tree arbol-->
+       <record id="view_taller_carros_tree" model="ir.ui.view">
+           <field name="name">modelo taller carros</field>
+           <field name="model">taller.carros</field>
+           <field name="arch" type="xml">
+               <tree>
+                   <field name="marca"/>
+                   <field name="matricula"/>
+                   <field name="customer_id"/>
+               </tree>
+           </field>
+       </record>
+
+       <!--Vista tipo form-->
+       <record id="view_taller_carros_form" model="ir.ui.view">
+           <field name="name">modelo taller carros</field>
+           <field name="model">taller.carros</field>
+           <field name="arch" type="xml">
+               <form>
+                   <sheet>
+                       <group>
+                           <field name="customer_id"/>
+                           <field name="country_id"/>
+                           <field name="city"/>
+                       </group>
+                       <group>
+                            <field name="marca"/>
+                            <field name="matricula"/>
+                            <field name="email" />
+                            <field name="brand" />
+                       </group>
+                   </sheet>
+               </form>
+           </field>
+       </record>
+
+       <!--Actions-->
+       <record model="ir.actions.act_window" id="action_vista_modoTree">
+           <field name="name">Vista modelo ventana</field>
+           <field name="res_model">taller.carros</field>
+           <field name="view_mode">tree,form</field>
+       </record>
+
+        <record model="ir.actions.act_window" id="action_vistas">
+           <field name="name">Vista modelo ventana</field>
+           <field name="res_model">taller.repair.order</field>
+           <field name="view_mode">tree,form</field>
+        </record>
+
+       <!--Menus-->
+       <menuitem id="taller_carros_menu_root"
+           name="Carros"
+           web_icon="taller_carrosV1,static/description/images.jpg"
+           active="True"
+           sequence="30">
+           <menuitem id="taller_carros_menu_1"
+               name="Menu"
+               sequence="10">
+               <menuitem id="taller_carros_task"
+                   name="submenu"
+                   sequence="10"
+                   action="action_vista_modoTree"/>
+               <menuitem id="taller_carros_task_usuarios"
+                   name="Usuarios"
+                   sequence="10"/>
+           </menuitem>
+
+       </menuitem>
+
+    </data>
+</odoo>
+

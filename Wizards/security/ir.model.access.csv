@@ -1,0 +1,9 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_model_taller_carros,taller.carros,model_taller_carros,base.group_user,1,1,1,1
+access_model_taller_carros_user,permisos.usuario carros,model_taller_carros,taller_carrosV1.group_taller_user,1,1,0,0
+access_model_taller_carros_manager,permisos.administrador,model_taller_carros,taller_carrosV1.group_taller_manager,1,1,1,1
+
+access_model_taller_carros_brand,taller.carros.brand,model_taller_brand,base.group_user,1,1,1,1
+
+access_model_repair_order,taller.repair.order,model_taller_repair_order,base.group_user,1,1,1,1
+access_model_repair_order_line,taller.repair.order.line,model_taller_repair_order_line,base.group_user,1,1,1,1

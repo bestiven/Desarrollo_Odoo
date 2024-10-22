@@ -1,0 +1,82 @@
+<odoo>
+   <data>
+       <!-- Vista tipo tree (árbol) -->
+       <record id="view_taller_repair_order_tree" model="ir.ui.view">
+           <field name="name">taller.repair.order.tree</field>
+           <field name="model">taller.repair.order</field>
+           <field name="arch" type="xml">
+               <tree>
+                   <field name="customer_id"/>
+                   <field name="name"/>
+                   <field name="date"/>
+               </tree>
+           </field>
+       </record>
+
+
+       <!-- Vista tipo form -->
+       <record id="view_taller_repair_order_form" model="ir.ui.view">
+           <field name="name">taller.repair.order.form</field>
+           <field name="model">taller.repair.order</field>
+           <field name="arch" type="xml">
+               <form>
+                   <sheet>
+                       <group>
+                           <field name="customer_id"/>
+                           <field name="name"/>
+                           <field name="date"/>
+                           <field name="line_ids"/>
+                       </group>
+                   </sheet>
+               </form>
+           </field>
+       </record>
+
+
+       <!-- Action ordenes de reparacion -->
+       <record model="ir.actions.act_window" id="action_vistas_repair_order">
+           <field name="name">Órdenes de Reparación</field>
+           <field name="res_model">taller.repair.order</field>
+           <field name="view_mode">tree,form</field>
+       </record>
+
+        <!-- Acción adicional para el submenú "Form Órdenes" -->
+       <record model="ir.actions.act_window" id="action_form_vistas_repair_order">
+           <field name="name">Formulario de Órdenes de Reparación</field>
+           <field name="res_model">taller.repair.order</field>
+           <field name="view_mode">form</field>
+       </record>
+
+        <!-- Menú principal -->
+        <menuitem id="taller_carros_menu_root"
+                   name="Carros"
+                   web_icon="Wizards/static/description/icon.jpg"
+                   active="True"
+                   sequence="30">
+
+            <menuitem id="taller_carros_menu_1"
+                      name="Menu"
+                      sequence="10">
+                <menuitem id="taller_carros_task_submenu"
+                          name="submenu"
+                          sequence="10"
+                          action="action_vista_modoTree"/>
+                <menuitem id="taller_carros_task_usuarios"
+                          name="Usuarios"
+                          sequence="20"/>
+            </menuitem>
+
+            <!-- Menú Órdenes de Reparación al lado derecho -->
+            <menuitem id="taller_carros_repair_order_task"
+                      name="Órdenes de Reparación"
+                      sequence="15">
+                 <menuitem id="taller_carros_task"
+                          name="submenu"
+                          sequence="10"
+                          action="action_vista_modoTree"/>
+            </menuitem>
+        </menuitem>
+
+   </data>
+</odoo>
+

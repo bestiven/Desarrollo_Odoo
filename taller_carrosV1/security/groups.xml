@@ -1,0 +1,11 @@
+<odoo>
+    <data noupdate="0">
+        <record id="group_taller_user" model="res.groups">
+            <field name="name">Gestion taller Usuarios</field>
+        </record>
+
+        <record id="group_taller_manager" model="res.groups">
+            <field name="name">Gestion taller Adminitrador</field>
+        </record>
+    </data>
+</odoo>
